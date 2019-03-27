@@ -17,14 +17,20 @@ Three methods were used.
 
 ### Running the module
 
-To run the callback module, use the command 
+To run the callback-based module, use the command 
 
 ```
 npm run callback
 ``` 
 
-To run the promises module, use the command 
+To run the promise-based module, use the command 
 
 ```
 npm run promises
 ``` 
+
+To run the async/await-based module, use the command 
+
+```
+npm run async-await
+```
