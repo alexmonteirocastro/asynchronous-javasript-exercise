@@ -22,3 +22,9 @@ To run the callback module, use the command
 ```
 npm run callback
 ``` 
+
+To run the promises module, use the command 
+
+```
+npm run promises
+``` 

@@ -4,7 +4,8 @@
   "description": "Homework assignment for first week. ",
   "main": "index.js",
   "scripts": {
-    "callback": "node callback"
+    "callback": "node callback",
+    "promises": "node promises"
   },
   "keywords": [
     "asynchronous",
@@ -14,6 +15,7 @@
   "author": "Alexandre Castro",
   "license": "ISC",
   "dependencies": {
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
   }
 }

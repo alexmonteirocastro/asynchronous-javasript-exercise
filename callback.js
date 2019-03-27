@@ -1,4 +1,4 @@
-var request = require('request');
+const request = require('request');
 
 const BASE_URL = 'https://swapi.co/api/'
 
@@ -18,7 +18,7 @@ function printVehicleNames(vehiclesArray){
     vehiclesArray.map((vehicle, index) => {
         request(vehicle, function (error, response) {
             const vehicleData = JSON.parse(response.body)
-            console.log(`Vehicle ${index}: ${vehicleData.name}`)
+            console.log(`Vehicle ${index + 1}: ${vehicleData.name}`)
         });
     })    
 }
