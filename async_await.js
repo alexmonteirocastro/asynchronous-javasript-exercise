@@ -11,13 +11,10 @@ async function getCharacterVehicleNames() {
   const vehicles = characterData.vehicles
   console.log('Fetching Vehicles data...')
   Promise.all(
-    vehicles.map(async vehicleUrl => {
-      const vehicleDetails = await rp({
-        uri: vehicleUrl,
-        json: true
-      })
-      return vehicleDetails
-    })
+    vehicles.map(async vehicleUrl => await rp({
+      uri: vehicleUrl,
+      json: true
+    }))
   ).then(vehicleData => {
     vehicleData.map((vehicle, index) => console.log(`Vehicle ${index + 1}: ${vehicle.name}`))
   })
