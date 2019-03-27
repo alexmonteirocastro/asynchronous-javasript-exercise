@@ -14,3 +14,7 @@ Three methods were used.
 1. CallBack
 2. Promises
 3. Async/await
+
+### Running the module
+
+To run the module, the command `npm run test` can be used
