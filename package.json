@@ -4,7 +4,7 @@
   "description": "Homework assignment for first week. ",
   "main": "index.js",
   "scripts": {
-    "test": "node index"
+    "callback": "node callback"
   },
   "keywords": [
     "asynchronous",

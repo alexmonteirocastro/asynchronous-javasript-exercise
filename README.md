@@ -17,4 +17,8 @@ Three methods were used.
 
 ### Running the module
 
-To run the module, the command `npm run test` can be used
+To run the callback modul, usethe command 
+
+```
+npm run callback
+``` 
