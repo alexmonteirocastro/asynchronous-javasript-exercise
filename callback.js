@@ -4,8 +4,8 @@ const BASE_URL = 'https://swapi.co/api/'
 
 function getCharacterDetails(route){
     console.log('Fetching character data...')
-    request(route, function (error, response) {
-        fetchVehicles(JSON.parse(response.body))
+    request({ uri: route, json: true }, function (error, response) {
+        fetchVehicles(response.body)
     });
 }
 
@@ -16,9 +16,8 @@ function fetchVehicles(character){
 
 function printVehicleNames(vehiclesArray){
     vehiclesArray.map((vehicle, index) => {
-        request(vehicle, function (error, response) {
-            const vehicleData = JSON.parse(response.body)
-            console.log(`Vehicle ${index + 1}: ${vehicleData.name}`)
+        request({ uri: vehicle, json: true }, function (error, response) {
+            console.log(`Vehicle ${index + 1}: ${response.body.name}`)
         });
     })    
 }

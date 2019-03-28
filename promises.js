@@ -12,11 +12,8 @@ function fetchCharacterVehicleNames(endPoint){
 
 function fetchVehicles(character){
     console.log('Fetching vehicle data...')
-    character.vehicles.map((vehicle, index) => {
-        rp({ uri: vehicle, json: true }).then(vehicleData => {
-            console.log(`Vehicle ${index + 1}: ${vehicleData.name}`)
-        })
-    })
+    Promise.all(character.vehicles.map(vehicle => rp({ uri: vehicle, json: true })))
+        .then(vehiclesData => vehiclesData.map((vehicle, index) => console.log(`Vehicle ${index + 1}: ${vehicle.name}`)))
 }
 
 fetchCharacterVehicleNames()
